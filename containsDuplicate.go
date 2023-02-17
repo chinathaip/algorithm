@@ -1,21 +1,34 @@
 package main
 
-/*
-1. loop through the slice
-2. store each num into map, set value as true
-3. if it's already in map, return true
+import (
+	"sort"
+)
 
+/*
+1. sort the slice
+2. check if the current value is equal to the previous value or not
+3. if equal -> return true
+
+[1,2,3,1] --> [1,1,2,3]
+
+This solution takes more time, but less space
 
 */
 
 func containsDuplicate(nums []int) bool {
-	seen := map[int]bool{}
+	sort.Ints(nums) //sort take O(n log n)
 
-	for _, num := range nums {
-		if seen[num] {
+	for index, _ := range nums {
+		if index == 0 {
+			continue
+		}
+
+		if nums[index] == nums[index-1] {
 			return true
 		}
-		seen[num] = true
 	}
 	return false
+
+	//Time complexity: O(n log n)
+	//Space complexity: O(1)
 }
