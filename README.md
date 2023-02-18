@@ -6,3 +6,4 @@
 - Two Sum
 - Maximum Sub Array
 - Contains Duplicate
+- Merge Sorted Array
