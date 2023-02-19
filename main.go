@@ -17,6 +17,6 @@ func main() {
 
 	// x := intersect([]int{1, 2, 2, 1}, []int{2, 2})
 
-	x := maxProfit([]int{7, 6, 4, 3, 1})
+	x := maxProfit([]int{7, 1, 5, 3, 6, 4})
 	fmt.Println(x)
 }
