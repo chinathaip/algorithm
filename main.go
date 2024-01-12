@@ -19,6 +19,14 @@ func main() {
 
 	// x := maxProfit([]int{7, 1, 5, 3, 6, 4})
 
-	x := matrixReshape([][]int{{1, 2}, {3, 4}}, 1, 4)
-	fmt.Println(x)
+	// x := matrixReshape([][]int{{1, 2}, {3, 4}}, 1, 4)
+	// fmt.Println(x)
+
+	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+	// Test cases
+	fmt.Println(BinarySearch(arr, 5))  // Expected output: 4 (index of 5)
+	fmt.Println(BinarySearch(arr, 1))  // Expected output: 0 (index of 1)
+	fmt.Println(BinarySearch(arr, 10)) // Expected output: 9 (index of 10)
+	fmt.Println(BinarySearch(arr, 0))  // Expected output: -1 (not found)
 }
